@@ -11,8 +11,8 @@ pipeline {
       parallel {
         stage('Build Docker Image') {
           steps {
-            sh 'cd vote && docker build . -t 612669372172.dkr.ecr.us-east-1.amazonaws.com/vote:${BUILD_NUMBER}'
-            sh ' docker push 612669372172.dkr.ecr.us-east-1.amazonaws.com/vote:${BUILD_NUMBER}'
+            sh 'cd vote && sudo docker build . -t 612669372172.dkr.ecr.us-east-1.amazonaws.com/vote:${BUILD_NUMBER}'
+            sh 'sudo docker push 612669372172.dkr.ecr.us-east-1.amazonaws.com/vote:${BUILD_NUMBER}'
           }
         }
 
