@@ -51,9 +51,9 @@ aws ecs update-service --cluster ${ECS_CLUSTER} \
   }
   environment {
     AWS_DEFAULT_REGION = 'us-east-1'
-    SERVICE_NAME = 'vote'
+    SERVICE_NAME = 'voteapp'
     TASK_FAMILY = 'vote-fargate-v1'
-    ECS_CLUSTER = 'vote-application'
+    ECS_CLUSTER = 'voteapp'
   }
   post {
     always {
